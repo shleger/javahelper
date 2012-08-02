@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='ru.saa.sample.gxt.Toolkit' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/Toolkit/greet" class="ru.saa.sample.gxt.server.GreetingServiceImpl" />
+
+</module>
