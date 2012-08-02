@@ -1,5 +1,6 @@
 package ru.saa.sample.gxt.client;
 
+import com.sencha.gxt.widget.core.client.button.TextButton;
 import ru.saa.sample.gxt.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -40,6 +41,12 @@ public class Toolkit implements EntryPoint {
    * This is the entry point method.
    */
   public void onModuleLoad() {
+
+      final TextButton textButton = new TextButton("textButtonText");
+
+
+
+
     final Button sendButton = new Button( messages.sendButton() );
     final TextBox nameField = new TextBox();
     nameField.setText( messages.nameField() );
@@ -50,6 +57,9 @@ public class Toolkit implements EntryPoint {
 
     // Add the nameField and sendButton to the RootPanel
     // Use RootPanel.get() to get the entire body element
+
+    RootPanel.get("gxtContainer").add(textButton);
+
     RootPanel.get("nameFieldContainer").add(nameField);
     RootPanel.get("sendButtonContainer").add(sendButton);
     RootPanel.get("errorLabelContainer").add(errorLabel);
