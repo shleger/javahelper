@@ -7,7 +7,7 @@
   <!-- POM file generated with GWT webAppCreator -->
   <modelVersion>4.0.0</modelVersion>
   <groupId>ru.saa.sample.gxt</groupId>
-  <artifactId>toolkit-probe</artifactId>
+  <artifactId>gxt-toolkit-probe</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>GWT Maven Archetype</name>
