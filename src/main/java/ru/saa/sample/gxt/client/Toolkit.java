@@ -1,5 +1,6 @@
 package ru.saa.sample.gxt.client;
 
+import com.google.gwt.dom.client.Document;
 import com.sencha.gxt.widget.core.client.button.TextButton;
 import ru.saa.sample.gxt.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
@@ -58,7 +59,14 @@ public class Toolkit implements EntryPoint {
     // Add the nameField and sendButton to the RootPanel
     // Use RootPanel.get() to get the entire body element
 
+    // GXT button
     RootPanel.get("gxtContainer").add(textButton);
+
+
+      //simple uiBinder
+      BinderUi binderUi = new BinderUi();
+      Document.get().getBody().appendChild(binderUi.getElement());
+      binderUi.setTitle(" GWT !!!");
 
     RootPanel.get("nameFieldContainer").add(nameField);
     RootPanel.get("sendButtonContainer").add(sendButton);
