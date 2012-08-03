@@ -31,6 +31,8 @@ public class HelloWidgetWorld extends Composite {
     @UiField
     Button gButton ;
 
+    String  clickMessage;
+
 
     public HelloWidgetWorld(String... names) {
 
@@ -46,8 +48,16 @@ public class HelloWidgetWorld extends Composite {
         return gButton;
     }
 
+    public String getClickMessage() {
+        return clickMessage;
+    }
+
+    public void setClickMessage(String clickMessage) {
+        this.clickMessage = clickMessage;
+    }
+
     @UiHandler("gButton")
     void handleClick(ClickEvent e) {
-        Window.alert("Hello, AJAX");
+        Window.alert(clickMessage == null?"Hello, AJAX":clickMessage);
     }
 }

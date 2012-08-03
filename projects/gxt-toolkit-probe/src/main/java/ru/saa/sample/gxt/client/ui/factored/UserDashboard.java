@@ -31,6 +31,7 @@ public class UserDashboard extends Composite{
     HelloWidgetWorld makeCricketScores() { // method name is insignificant
         HelloWidgetWorld hw = new HelloWidgetWorld("Mark", "Tom", "Bruce");
         hw.getgButton().setText("factoredButton");
+        hw.setClickMessage("Click on imported widget");
         return hw;
     }
 }
