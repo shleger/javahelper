@@ -1,0 +1,17 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <ui:style>
+        .hwStyle{
+            border: 1px solid green;
+        }
+    </ui:style>
+
+    <g:HTMLPanel styleName="{style.hwStyle}">
+
+        Hello, <g:ListBox ui:field="listBox"  visibleItemCount="1"/>
+
+        <g:Button ui:field="gButton" />
+
+    </g:HTMLPanel>
+</ui:UiBinder>

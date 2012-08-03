@@ -6,6 +6,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
+import ru.saa.sample.gxt.client.ui.constructor.HelloWidgetWorldwithUiConstructor;
 import ru.saa.sample.gxt.client.ui.widget.HelloWidgetWorld;
 
 /**
@@ -26,7 +27,7 @@ public class UserDashboard extends Composite{
         initWidget(ourUiBinder.createAndBindUi(this));
 
     }
-    /** Used by UserDashboardUiBinder to instantiate HelloWidgetWorld */
+    /** Used by UserDashboardUiBinder to instantiate HelloWidgetWorldwithUiConstructor */
     @UiFactory
     HelloWidgetWorld makeCricketScores() { // method name is insignificant
         HelloWidgetWorld hw = new HelloWidgetWorld("Mark", "Tom", "Bruce");
