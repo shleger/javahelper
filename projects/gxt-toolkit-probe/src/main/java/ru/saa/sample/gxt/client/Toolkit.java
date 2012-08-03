@@ -45,7 +45,7 @@ public class Toolkit implements EntryPoint {
      */
     public void onModuleLoad() {
 
-        final TextButton textButton = new TextButton("textButtonText");
+        final TextButton textButton = new TextButton("gxtSimpleButton");
 
 
         final Button sendButton = new Button(messages.sendButton());
@@ -70,7 +70,7 @@ public class Toolkit implements EntryPoint {
 
         // Use Widgets
         HelloWidgetWorld helloWidgetWorld = new HelloWidgetWorld("Mary", "Julia", "Susie");
-        helloWidgetWorld.getgButton().setText("clickFromPanel");
+        helloWidgetWorld.getgButton().setText("gwtUiButton");
         helloWidgetWorld.getgButton().setTitle("clickFromPanel");
 
         RootPanel.get("widgetContainer").add(helloWidgetWorld);
