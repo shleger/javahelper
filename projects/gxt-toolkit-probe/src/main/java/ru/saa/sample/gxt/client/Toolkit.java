@@ -70,7 +70,10 @@ public class Toolkit implements EntryPoint {
 
         // Use Widgets
         HelloWidgetWorld helloWidgetWorld = new HelloWidgetWorld("Mary", "Julia", "Susie");
-        RootPanel.get("listBoxContainer").add(helloWidgetWorld);
+        helloWidgetWorld.getgButton().setText("clickFromPanel");
+        helloWidgetWorld.getgButton().setTitle("clickFromPanel");
+
+        RootPanel.get("widgetContainer").add(helloWidgetWorld);
 
         RootPanel.get("nameFieldContainer").add(nameField);
         RootPanel.get("sendButtonContainer").add(sendButton);

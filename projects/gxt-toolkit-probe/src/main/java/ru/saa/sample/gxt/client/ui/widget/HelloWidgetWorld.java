@@ -2,8 +2,12 @@ package ru.saa.sample.gxt.client.ui.widget;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.DivElement;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Widget;
@@ -15,7 +19,7 @@ import com.google.gwt.user.client.ui.Widget;
  * Time: 10:28
  * To change this template use File | Settings | File Templates.
  */
-public class HelloWidgetWorld  extends Composite{
+public class HelloWidgetWorld extends Composite {
     interface HelloWidgetWorldUiBinder extends UiBinder<Widget, HelloWidgetWorld> {
     }
 
@@ -24,9 +28,11 @@ public class HelloWidgetWorld  extends Composite{
     @UiField
     ListBox listBox;
 
+    @UiField
+    Button gButton ;
 
 
-    public HelloWidgetWorld(String ... names) {
+    public HelloWidgetWorld(String... names) {
 
         initWidget(ourUiBinder.createAndBindUi(this));
 
@@ -34,5 +40,14 @@ public class HelloWidgetWorld  extends Composite{
             listBox.addItem(name);
         }
 
+    }
+
+    public Button getgButton() {
+        return gButton;
+    }
+
+    @UiHandler("gButton")
+    void handleClick(ClickEvent e) {
+        Window.alert("Hello, AJAX");
     }
 }
