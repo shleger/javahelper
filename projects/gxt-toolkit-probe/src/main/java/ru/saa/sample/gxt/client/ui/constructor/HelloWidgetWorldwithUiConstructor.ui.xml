@@ -3,7 +3,7 @@
 
     <ui:style>
         .hwStyle{
-            border: 1px solid green;
+            border: 1px solid yellow;
         }
     </ui:style>
 
