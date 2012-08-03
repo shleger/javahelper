@@ -24,6 +24,8 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+import java.util.Date;
+
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  * @see  <url>https://developers.google.com/web-toolkit/doc/latest/DevGuideUiBinder#Hello_World</url>
@@ -83,6 +85,7 @@ public class Toolkit implements EntryPoint {
         HelloWidgetWorld helloWidgetWorld = new HelloWidgetWorld("Mary", "Julia", "Susie");
         helloWidgetWorld.getgButton().setText("gwtUiButton");
         helloWidgetWorld.getgButton().setTitle("clickFromPanel");
+        helloWidgetWorld.setClickMessage(messages.lastUpdate(new Date()));
         RootPanel.get("widgetContainer").add(helloWidgetWorld);
 
 
