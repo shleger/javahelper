@@ -1,4 +1,4 @@
-package ru.saa.sample.gxt.client;
+package ru.saa.sample.gxt.client.ui.verysimple;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.DivElement;

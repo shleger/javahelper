@@ -2,6 +2,7 @@ package ru.saa.sample.gxt.client;
 
 import com.google.gwt.dom.client.Document;
 import com.sencha.gxt.widget.core.client.button.TextButton;
+import ru.saa.sample.gxt.client.ui.verysimple.BinderUi;
 import ru.saa.sample.gxt.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
