@@ -2,11 +2,13 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
     <ui:style>
         .redborder {
-            color: red;
+            border: 1px solid red;
+            width: 100px;
+            height: 30px;
         }
     </ui:style>
 
-    <div>
+    <div class="{style.redborder}">
         Hello,<span ui:field='nameSpan'/>.
     </div>
 </ui:UiBinder>

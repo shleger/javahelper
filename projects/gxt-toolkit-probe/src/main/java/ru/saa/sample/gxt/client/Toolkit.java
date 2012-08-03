@@ -68,8 +68,8 @@ public class Toolkit implements EntryPoint {
         Document.get().getBody().appendChild(binderUi.getElement());
         binderUi.setTitle(" GWT !!!");
 
+        // Use Widgets
         HelloWidgetWorld helloWidgetWorld = new HelloWidgetWorld("Mary", "Julia", "Susie");
-
         RootPanel.get("listBoxContainer").add(helloWidgetWorld);
 
         RootPanel.get("nameFieldContainer").add(nameField);
