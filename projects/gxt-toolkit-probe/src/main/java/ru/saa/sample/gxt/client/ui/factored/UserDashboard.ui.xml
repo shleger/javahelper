@@ -2,7 +2,8 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client'
              xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
-             xmlns:my="urn:import:ru.saa.sample.gxt.client.ui.constructor">
+             xmlns:my="urn:import:ru.saa.sample.gxt.client.ui.constructor"
+             xmlns:my2="urn:import:ru.saa.sample.gxt.client.ui.widget">
 
     <ui:style>
         .blueStyle{
@@ -12,5 +13,6 @@
     <g:HTMLPanel styleName="{style.blueStyle}">
         <gxt:ColorPalette title="colorPalette from GXTlib"/>
         <my:HelloWidgetWorldwithUiConstructor strNames="Asd, Dfg, Sdf" clickMessage="OOps you clicked " buttonName="ClickMe"/>
+        <my2:HelloWidgetWorld />
     </g:HTMLPanel>
 </ui:UiBinder>
