@@ -3,8 +3,10 @@ package ru.saa.sample.gxt.client.ui.factored;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
+import ru.saa.sample.gxt.client.ui.widget.HelloWidgetWorld;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,5 +25,12 @@ public class UserDashboard extends Composite{
 
         initWidget(ourUiBinder.createAndBindUi(this));
 
+    }
+    /** Used by UserDashboardUiBinder to instantiate HelloWidgetWorld */
+    @UiFactory
+    HelloWidgetWorld makeCricketScores() { // method name is insignificant
+        HelloWidgetWorld hw = new HelloWidgetWorld("Mark", "Tom", "Bruce");
+        hw.getgButton().setText("factoredButton");
+        return hw;
     }
 }
