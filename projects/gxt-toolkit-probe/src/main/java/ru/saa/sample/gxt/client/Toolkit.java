@@ -2,6 +2,8 @@ package ru.saa.sample.gxt.client;
 
 import com.google.gwt.dom.client.Document;
 import com.sencha.gxt.widget.core.client.button.TextButton;
+import ru.saa.sample.gxt.client.internationalization.LangConstantMessages;
+import ru.saa.sample.gxt.client.internationalization.LangConstants;
 import ru.saa.sample.gxt.client.ui.factored.UserDashboard;
 import ru.saa.sample.gxt.client.ui.verysimple.BinderUi;
 import ru.saa.sample.gxt.client.ui.widget.HelloWidgetWorld;
@@ -41,7 +43,9 @@ public class Toolkit implements EntryPoint {
      */
     private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
 
-    private final Messages messages = GWT.create(Messages.class);
+//    private final Messages messages = GWT.create(Messages.class);
+    private LangConstants constants = GWT.create(LangConstants.class);
+    private  LangConstantMessages messages = GWT.create(LangConstantMessages.class);
 
     /**
      * This is the entry point method.
@@ -51,13 +55,17 @@ public class Toolkit implements EntryPoint {
         final TextButton textButton = new TextButton("gxtSimpleButton");
 
 
-        final Button sendButton = new Button(messages.sendButton());
+        final Button sendButton = new Button(constants.sendButton());
         final TextBox nameField = new TextBox();
-        nameField.setText(messages.nameField());
+        nameField.setText(constants.nameField());
         final Label errorLabel = new Label();
 
         // We can add style names to widgets
         sendButton.addStyleName("sendButton");
+
+
+        RootPanel.get("widgetEx").getElement().setInnerHTML(constants.widgetEx());
+        RootPanel.get("factoryEx").getElement().setInnerText(constants.factoryEx());
 
         // Add the nameField and sendButton to the RootPanel
         // Use RootPanel.get() to get the entire body element
