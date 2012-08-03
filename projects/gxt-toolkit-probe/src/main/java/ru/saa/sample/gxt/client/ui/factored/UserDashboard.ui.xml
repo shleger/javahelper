@@ -1,0 +1,14 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client'
+             xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container">
+
+    <ui:style>
+        .blueStyle{
+            border: 1px solid blue;
+        }
+    </ui:style>
+    <g:HTMLPanel styleName="{style.blueStyle}">
+        <gxt:ColorPalette title="colorPalette"/>
+    </g:HTMLPanel>
+</ui:UiBinder>

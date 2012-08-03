@@ -2,6 +2,7 @@ package ru.saa.sample.gxt.client;
 
 import com.google.gwt.dom.client.Document;
 import com.sencha.gxt.widget.core.client.button.TextButton;
+import ru.saa.sample.gxt.client.ui.factored.UserDashboard;
 import ru.saa.sample.gxt.client.ui.verysimple.BinderUi;
 import ru.saa.sample.gxt.client.ui.widget.HelloWidgetWorld;
 import ru.saa.sample.gxt.shared.FieldVerifier;
@@ -23,6 +24,8 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
+ * @see  <url>https://developers.google.com/web-toolkit/doc/latest/DevGuideUiBinder#Hello_World</url>
+ *
  */
 public class Toolkit implements EntryPoint {
     /**
@@ -72,8 +75,15 @@ public class Toolkit implements EntryPoint {
         HelloWidgetWorld helloWidgetWorld = new HelloWidgetWorld("Mary", "Julia", "Susie");
         helloWidgetWorld.getgButton().setText("gwtUiButton");
         helloWidgetWorld.getgButton().setTitle("clickFromPanel");
-
         RootPanel.get("widgetContainer").add(helloWidgetWorld);
+
+
+        //Use factored widget
+
+        UserDashboard userDashboard = new UserDashboard();
+        RootPanel.get("factoredContainer").add(userDashboard);
+
+
 
         RootPanel.get("nameFieldContainer").add(nameField);
         RootPanel.get("sendButtonContainer").add(sendButton);
