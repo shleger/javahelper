@@ -5,6 +5,7 @@ import com.sencha.gxt.widget.core.client.button.TextButton;
 import ru.saa.sample.gxt.client.internationalization.LangConstantsMessages;
 import ru.saa.sample.gxt.client.internationalization.LangConstants;
 import ru.saa.sample.gxt.client.ui.factored.UserDashboard;
+import ru.saa.sample.gxt.client.ui.menu.MenuBarUiBinderExample;
 import ru.saa.sample.gxt.client.ui.verysimple.BinderUi;
 import ru.saa.sample.gxt.client.ui.widget.HelloWidgetWorld;
 import ru.saa.sample.gxt.shared.FieldVerifier;
@@ -99,6 +100,10 @@ public class Toolkit implements EntryPoint {
         RootPanel.get("nameFieldContainer").add(nameField);
         RootPanel.get("sendButtonContainer").add(sendButton);
         RootPanel.get("errorLabelContainer").add(errorLabel);
+
+        //Menu GXT
+        MenuBarUiBinderExample menuBarUiBinderExample = new MenuBarUiBinderExample();
+        RootPanel.get("menuContainer").add(menuBarUiBinderExample);
 
         // Focus the cursor on the name field when the app loads
         nameField.setFocus(true);
