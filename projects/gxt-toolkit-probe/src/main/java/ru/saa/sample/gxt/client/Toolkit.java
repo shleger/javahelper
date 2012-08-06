@@ -2,7 +2,7 @@ package ru.saa.sample.gxt.client;
 
 import com.google.gwt.dom.client.Document;
 import com.sencha.gxt.widget.core.client.button.TextButton;
-import ru.saa.sample.gxt.client.internationalization.LangConstantMessages;
+import ru.saa.sample.gxt.client.internationalization.LangConstantsMessages;
 import ru.saa.sample.gxt.client.internationalization.LangConstants;
 import ru.saa.sample.gxt.client.ui.factored.UserDashboard;
 import ru.saa.sample.gxt.client.ui.verysimple.BinderUi;
@@ -47,7 +47,7 @@ public class Toolkit implements EntryPoint {
 
 //    private final Messages messages = GWT.create(Messages.class);
     private LangConstants constants = GWT.create(LangConstants.class);
-    private  LangConstantMessages messages = GWT.create(LangConstantMessages.class);
+    private LangConstantsMessages messages = GWT.create(LangConstantsMessages.class);
 
     /**
      * This is the entry point method.
