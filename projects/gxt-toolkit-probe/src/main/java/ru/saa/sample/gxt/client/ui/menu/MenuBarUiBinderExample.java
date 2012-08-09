@@ -12,7 +12,12 @@ import com.sencha.gxt.widget.core.client.info.Info;
 import com.sencha.gxt.widget.core.client.menu.Item;
 import com.sencha.gxt.widget.core.client.menu.MenuItem;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class MenuBarUiBinderExample implements IsWidget, EntryPoint {
+
+    Logger logger  = Logger.getLogger(MenuBarUiBinderExample.class.getName());
 
     interface MyUiBinder extends UiBinder<Widget, MenuBarUiBinderExample> {
     }
@@ -31,5 +36,6 @@ public class MenuBarUiBinderExample implements IsWidget, EntryPoint {
     public void onMenuSelection(SelectionEvent<Item> event) {
         MenuItem item = (MenuItem) event.getSelectedItem();
         Info.display("Action", "You selected the " + item.getText());
+        logger.log(Level.INFO, "Action: You select the :" + item.getText());
     }
 }

@@ -4,12 +4,17 @@ import ru.saa.sample.gxt.client.GreetingService;
 import ru.saa.sample.gxt.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * The server side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
 public class GreetingServiceImpl extends RemoteServiceServlet implements
     GreetingService {
+
+    Logger logger = Logger.getLogger(GreetingServiceImpl.class.getName());
 
   public String greetServer(String input) throws IllegalArgumentException {
     // Verify that the input is valid.
@@ -26,6 +31,8 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
     // Escape data from the client to avoid cross-site script vulnerabilities.
     input = escapeHtml(input);
     userAgent = escapeHtml(userAgent);
+
+      logger.log(Level.INFO,"logloglog: "+ userAgent);
 
     return "Hello, " + input + "!<br><br>I am running " + serverInfo
         + ".<br><br>It looks like you are using:<br>" + userAgent;
