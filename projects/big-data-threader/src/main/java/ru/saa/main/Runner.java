@@ -13,7 +13,7 @@ import ru.saa.thread.Task;
 
 public class Runner {
 
-    public static void main(String ... args){
+    public static void main(String... args) {
         System.out.println("Start main");
 
         Task task = new Task();
@@ -22,12 +22,14 @@ public class Runner {
         Thread thread = new Thread(task);
 
 
-//        try {
-//            thread.join();
-            thread.start();
-//        } catch (InterruptedException e) {
-//        }
+        try {
 
+        thread.start();
+         thread.join();
+        } catch (InterruptedException e) {
+        }
+
+        System.out.println("Stopped main");
 
     }
 }
