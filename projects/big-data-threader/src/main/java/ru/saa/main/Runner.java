@@ -23,9 +23,8 @@ public class Runner {
 
 
         try {
-
-        thread.start();
-         thread.join();
+            thread.start();
+            thread.join();
         } catch (InterruptedException e) {
         }
 
