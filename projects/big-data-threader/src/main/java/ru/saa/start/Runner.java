@@ -1,4 +1,4 @@
-package ru.saa.main;
+package ru.saa.start;
 
 import ru.saa.thread.BigDataProcessor;
 
