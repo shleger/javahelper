@@ -1,6 +1,13 @@
 package com.ninetyktc.shared.between.threads;
 
 /**
+ *
+ * from http://90kts.com/2007/10/25/sharing-data-safely-between-java-threads/
+ *
+ *
+ */
+
+/**
  * Created with IntelliJ IDEA.
  * User: shleger
  * Date: 10.08.12
