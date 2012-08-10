@@ -19,7 +19,7 @@ package ru.saa.thread;
  * Time: 13:43
  * To change this template use File | Settings | File Templates.
  */
-public class Task implements Runnable {
+public class BigDataProcessor implements Runnable {
     private boolean isContinue = true;
     /**
      * delay time in millis

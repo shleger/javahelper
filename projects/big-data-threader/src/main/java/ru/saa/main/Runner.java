@@ -1,6 +1,6 @@
 package ru.saa.main;
 
-import ru.saa.thread.Task;
+import ru.saa.thread.BigDataProcessor;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,10 +16,10 @@ public class Runner {
     public static void main(String... args) {
         System.out.println("Start main");
 
-        Task task = new Task();
-        task.setDelayTime(5000L);
+        BigDataProcessor bigDataProcessor = new BigDataProcessor();
+        bigDataProcessor.setDelayTime(5000L);
 
-        Thread thread = new Thread(task);
+        Thread thread = new Thread(bigDataProcessor);
 
 
         try {
