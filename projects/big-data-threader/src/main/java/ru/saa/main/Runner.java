@@ -25,6 +25,12 @@ public class Runner {
         try {
             thread.start();
             thread.join();
+
+            while (thread.isAlive()){
+
+                System.out.print("is Alive");
+            }
+
         } catch (InterruptedException e) {
         }
 
