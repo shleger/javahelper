@@ -31,13 +31,17 @@ public class Task implements Runnable {
     @Override
     public void run() {
 
-        while (isContinue &&  (System.currentTimeMillis() - currentTime) < delayTime) {
+        long sum = 0;
+
+        while (isContinue && ((sum =  (System.currentTimeMillis() - currentTime)) < delayTime)) {
+
+
 
             try {
-                Thread.sleep(500L);
-                System.out.println("Process BIG data: " + (System.currentTimeMillis() - currentTime));
+                Thread.sleep(1000L);
+                System.out.println("Process BIG data: " + sum);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
 
 
