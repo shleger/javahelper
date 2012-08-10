@@ -1,4 +1,4 @@
-package ru.saa.thread.main;
+package ru.saa.main;
 
 import ru.saa.thread.Task;
 
@@ -22,11 +22,11 @@ public class Runner {
         Thread thread = new Thread(task);
 
 
-        try {
-            thread.join();
+//        try {
+//            thread.join();
             thread.start();
-        } catch (InterruptedException e) {
-        }
+//        } catch (InterruptedException e) {
+//        }
 
 
     }
