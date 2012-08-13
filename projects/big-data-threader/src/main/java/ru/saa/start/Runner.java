@@ -1,6 +1,7 @@
 package ru.saa.start;
 
 import ru.saa.thread.BigDataProcessor;
+import ru.saa.thread.FeedBack;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,13 +14,37 @@ import ru.saa.thread.BigDataProcessor;
 
 public class Runner {
 
-    public static void main(String... args) {
+	public static void main(String ...args ){
+
+
+		Runner runner = new Runner();
+		runner.runRunner();
+
+
+	}
+
+
+    public void runRunner() {
         System.out.println("Start main");
 
         BigDataProcessor bigDataProcessor = new BigDataProcessor();
         bigDataProcessor.setDelayTime(5000L);
 
+        FeedBack feedBack = new FeedBack();
+
         Thread thread = new Thread(bigDataProcessor);
+
+//        synchronized (feedBack) {
+//
+//        	try {
+//				this.wait();
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//
+//
+//		}
 
 
         try {
