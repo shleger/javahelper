@@ -28,7 +28,6 @@ public class BigDataProcessor implements Runnable {
 
     private Long currentTime = System.currentTimeMillis();
 
-    @Override
     public void run() {
 
         long sum = 0;
