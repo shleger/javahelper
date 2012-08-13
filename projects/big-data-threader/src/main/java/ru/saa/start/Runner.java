@@ -14,14 +14,23 @@ import ru.saa.thread.FeedBack;
 
 public class Runner {
 
-	public static void main(String ...args ){
+    FeedBack feedBack;
+
+    public Runner() {
+    }
+
+    public Runner(FeedBack feedBack) {
+        this.feedBack = feedBack;
+    }
+
+    public static void main(String... args) {
 
 
-		Runner runner = new Runner();
-		runner.runRunner();
+        Runner runner = new Runner(new FeedBack());
+        runner.runRunner();
 
 
-	}
+    }
 
 
     public void runRunner() {
@@ -30,7 +39,6 @@ public class Runner {
         BigDataProcessor bigDataProcessor = new BigDataProcessor();
         bigDataProcessor.setDelayTime(5000L);
 
-        FeedBack feedBack = new FeedBack();
 
         Thread thread = new Thread(bigDataProcessor);
 
@@ -51,7 +59,7 @@ public class Runner {
             thread.start();
             thread.join();
 
-            while (thread.isAlive()){
+            while (thread.isAlive()) {
 
                 System.out.print("is Alive");
             }
