@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='com.javacodegeeks.gwtspring.GWTSpring' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/GWTSpring/springGwtServices/employeeService" class="org.spring4gwt.server.SpringGwtRemoteServiceServlet" />
+
+</module>

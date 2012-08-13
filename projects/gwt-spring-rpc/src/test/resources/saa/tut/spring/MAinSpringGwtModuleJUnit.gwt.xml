@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='saa.tut.spring.MAinSpringGwtModule' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/MAinSpringGwtModule/greet" class="saa.tut.spring.server.GreetingServiceImpl" />
+
+</module>
