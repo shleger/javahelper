@@ -11,7 +11,10 @@ class Operator extends Thread {
     public void run() {
         while (true) {
             synchronized (this) {
-                // Calculate new machine steps from shape
+                for (int i = 0; i < 30; i++) {
+                    System.out.println("Operator.run:\t" + i + "\t Do export things " + getName());
+
+                }
                 notify();
             }
         }
