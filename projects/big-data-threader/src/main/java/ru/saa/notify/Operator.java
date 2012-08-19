@@ -1,5 +1,7 @@
 package ru.saa.notify;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: saa
@@ -8,16 +10,28 @@ package ru.saa.notify;
  * To change this template use File | Settings | File Templates.
  */
 class Operator extends Thread {
-    public void run() {
-        while (true) {
-            synchronized (this) {
-                for (int i = 0; i < 30; i++) {
-                    System.out.println("Operator.run:\t" + i + "\t Do export things " + getName());
+    long memTime = System.currentTimeMillis();
+    long period = 5000;
 
+    public void run() {
+
+
+        System.out.println("start Operator.run");
+        while (true) {
+
+            synchronized (this) {
+                Long cur = System.currentTimeMillis();
+                while (  ((cur = System.currentTimeMillis()) - memTime) > period   ) {
+//      for (int i = 0; i < 3000; i++) {
+                        System.out.println("Operator.run:\t" + new Date(cur) + "\t Do export things " + getName());
+                    memTime = cur;
+
+//                }
+                    notify();
                 }
-                notify();
             }
         }
+        // System.out.println("end Operator.run");
     }
 
 }
