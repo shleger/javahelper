@@ -14,19 +14,15 @@ class Operator extends Thread {
     long period = 5000;
 
     public void run() {
-
-
+        Long cur = 0L;
         System.out.println("start Operator.run");
         while (true) {
 
             synchronized (this) {
-                Long cur = System.currentTimeMillis();
-                while (  ((cur = System.currentTimeMillis()) - memTime) > period   ) {
-//      for (int i = 0; i < 3000; i++) {
-                        System.out.println("Operator.run:\t" + new Date(cur) + "\t Do export things " + getName());
+                while (((cur = System.currentTimeMillis()) - memTime) > period) {
+                    System.out.println("Operator.run:\t" + new Date(cur) + "\t Do export things " + getName());
                     memTime = cur;
 
-//                }
                     notify();
                 }
             }
