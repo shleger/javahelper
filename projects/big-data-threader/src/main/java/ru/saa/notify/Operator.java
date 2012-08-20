@@ -19,11 +19,14 @@ class Operator extends Thread {
         while (true) {
 
             synchronized (this) {
-                while (((cur = System.currentTimeMillis()) - memTime) > period) {
-                    System.out.println("Operator.run:\t" + new Date(cur) + "\t Do export things " + getName());
+                if (((cur = System.currentTimeMillis()) - memTime) > period) {
+                    System.out.println("Operator.run:\t" + new Date(cur) + "\t  NOTIFY " + getName());
                     memTime = cur;
-
                     notify();
+
+                } else{
+                    System.out.println("Operator.run:\t" + new Date(cur) + "\t Do export things  " + getName());
+
                 }
             }
         }
