@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="Application_ID" version="5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd">
+ <display-name>xaDiskEar</display-name>
+ <module id="Module_1347443111620">
+ 	<web>
+ 		<web-uri>xaDiskServlet.war</web-uri>
+ 		<context-root>xaDiskServlet</context-root>
+ 	</web>
+ </module>
+ <module id="Module_1347444516610">
+ 	<ejb>xaDiskEjb.jar</ejb>
+ </module> 
+ </application> 
