@@ -62,7 +62,7 @@ public class ServletXaDisk extends HttpServlet {
 			
 			System.out.println("ejb:" + helloEjb);
 			
-//			helloEjb.doGetXaDisk();
+			helloEjb.doGetXaDisk();
 			
 			helloEjb.doGetXaDiskSingleJVM();
 			System.out.println("==commit==servlet");

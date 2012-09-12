@@ -39,13 +39,13 @@ public class XaDiskEjbBean implements XaDiskEjbBeanLocal {
 	public void doGetXaDisk() throws NamingException, ResourceException,
 			FileNotExistsException, FileUnderUseException,
 			InsufficientPermissionOnFileException, LockingFailedException,
-			NoTransactionAssociatedException, InterruptedException, IOException {
+			NoTransactionAssociatedException, InterruptedException, IOException, FileAlreadyExistsException {
 
 		System.out.println("start");
 
 		System.out.println("begin tx");
 		XADiskConnectionFactory cfLocal = (XADiskConnectionFactory) new InitialContext()
-				.lookup("eis/xaDisk/LocalConnectionFacory");
+				.lookup("XADiskConnectionFactory");
 
 
 		
@@ -55,7 +55,11 @@ public class XaDiskEjbBean implements XaDiskEjbBeanLocal {
 
 		System.out.println("connLocal: " + connection);
 
-		File f1 = new File("c:\\test123321.txt");
+		File f1 = new File("c:/1/test123321.txt");
+		
+        if (!connection.fileExists(f1 )) {
+            connection.createFile(f1 , false);
+        }
 
 		XAFileOutputStream xaFOS = connection.createXAFileOutputStream(f1,
 				false);
@@ -78,14 +82,15 @@ public class XaDiskEjbBean implements XaDiskEjbBeanLocal {
 	InsufficientPermissionOnFileException, LockingFailedException,
 	NoTransactionAssociatedException, InterruptedException, IOException, FileAlreadyExistsException, ClosedStreamException {
 		
+		String instanceId="xadisk-was-cf1";
 		
-		XAFileSystem xaf = XAFileSystemProxy.getNativeXAFileSystemReference("xadisk-was-cf1");
+		XAFileSystem xaf = XAFileSystemProxy.getNativeXAFileSystemReference(instanceId);
 		
 		System.out.println("same JVM:" + xaf);
 		
 		Session session = xaf.createSessionForLocalTransaction();
 		
-		File f =  new File("c:/test333.txt");
+		File f =  new File(instanceId + "/test333.txt");
 		
 		try {
 			session.createFile(f, false);

@@ -16,7 +16,7 @@ import org.xadisk.filesystem.exceptions.NoTransactionAssociatedException;
 @Local
 public interface XaDiskEjbBeanLocal {
 	
-	 public void doGetXaDisk() throws NamingException, ResourceException, FileNotExistsException, FileUnderUseException, InsufficientPermissionOnFileException, LockingFailedException, NoTransactionAssociatedException, InterruptedException, IOException ;
+	 public void doGetXaDisk() throws NamingException, ResourceException, FileNotExistsException, FileUnderUseException, InsufficientPermissionOnFileException, LockingFailedException, NoTransactionAssociatedException, InterruptedException, IOException, FileAlreadyExistsException ;
 	 
 	 public void doGetXaDiskSingleJVM() throws NamingException, ResourceException,
 		FileNotExistsException, FileUnderUseException,
