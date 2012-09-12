@@ -10,12 +10,18 @@ package ru.saa.notify;
 class Machine extends Thread {
     Operator operator; // assume this gets initialized
 
+    public Machine(Operator operator) {
+        this.operator = operator;
+    }
 
     public void run() {
         while (true) {
             synchronized (operator) {
                 try {
+                    System.out.println("Machine.run" + " - write update- " + getName());
                     operator.wait();
+                    System.out.println("Machine.run" + "- unWait - " + getName());
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
