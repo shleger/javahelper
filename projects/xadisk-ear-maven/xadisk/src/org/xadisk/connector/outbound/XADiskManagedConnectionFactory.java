@@ -28,6 +28,9 @@ public class XADiskManagedConnectionFactory implements ManagedConnectionFactory 
     private String instanceId;
 
     public XADiskManagedConnectionFactory() {
+
+        System.out.println("=====XADiskManagedConnectionFactory.XADiskManagedConnectionFactory");
+
     }
 
     public String getInstanceId() {
@@ -48,7 +51,13 @@ public class XADiskManagedConnectionFactory implements ManagedConnectionFactory 
 
     public ManagedConnection createManagedConnection(Subject subject, ConnectionRequestInfo cri)
             throws ResourceException {
-        return new XADiskManagedConnection(NativeXAFileSystem.getXAFileSystem(instanceId), instanceId);
+        NativeXAFileSystem xafs = NativeXAFileSystem.getXAFileSystem(instanceId);
+        System.out.println("===.createManagedConnection" + xafs.getXADiskSystemId());
+        System.out.println("===.createManagedConnection" + xafs.getTransactionLogsDir());
+        XADiskManagedConnection xadcf = new XADiskManagedConnection(xafs, instanceId);
+
+
+        return  xadcf;
     }
 
     public ManagedConnection matchManagedConnections(Set candidates, Subject subject, ConnectionRequestInfo cri)

@@ -22,7 +22,7 @@ This source code is being made available to the public under the terms specified
     <resourceadapter>
 
         <resourceadapter-class>
-            org.xadisk.connector.XADiskResourceAdapter
+            ru.iteco.org.xadisk.connector.outbound.XADiskResourceAdapter
         </resourceadapter-class>
 
         <config-property>

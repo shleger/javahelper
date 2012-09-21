@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>xadisk-all</artifactId>
+        <groupId>java.net.xadisk</groupId>
+        <version>1.2.1.00000</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>xadisk-war</artifactId>
+    <packaging>war</packaging>
+
+    <build>
+        <finalName>xadisk-war</finalName>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>servletapi</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>java.net.xadisk</groupId>
+            <artifactId>xadisk</artifactId>
+            <version>1.2.1.00000</version>
+        </dependency>
+        <dependency>
+            <groupId>java.net.xadisk</groupId>
+            <artifactId>xadisk-jar</artifactId>
+            <version>1.2.1.00000</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

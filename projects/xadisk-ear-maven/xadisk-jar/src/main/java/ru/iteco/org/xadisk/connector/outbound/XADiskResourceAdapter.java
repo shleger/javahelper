@@ -6,15 +6,16 @@ This source code is being made available to the public under the terms specified
 */
 
 
-package org.xadisk.connector;
+package ru.iteco.org.xadisk.connector.outbound;
 
+import org.xadisk.bridge.proxies.impl.RemoteXAFileSystem;
 import org.xadisk.connector.inbound.EndPointActivation;
 import org.xadisk.connector.inbound.XADiskActivationSpecImpl;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import org.xadisk.filesystem.FileSystemConfiguration;
+import org.xadisk.filesystem.NativeXAFileSystem;
+import org.xadisk.filesystem.XAFileSystemCommonness;
+import org.xadisk.filesystem.exceptions.XASystemException;
+
 import javax.resource.ResourceException;
 import javax.resource.spi.ActivationSpec;
 import javax.resource.spi.BootstrapContext;
@@ -22,37 +23,41 @@ import javax.resource.spi.ResourceAdapter;
 import javax.resource.spi.ResourceAdapterInternalException;
 import javax.resource.spi.endpoint.MessageEndpointFactory;
 import javax.transaction.xa.XAResource;
-import org.xadisk.bridge.proxies.impl.RemoteXAFileSystem;
-import org.xadisk.filesystem.FileSystemConfiguration;
-import org.xadisk.filesystem.NativeXAFileSystem;
-import org.xadisk.filesystem.XAFileSystemCommonness;
-import org.xadisk.filesystem.exceptions.XASystemException;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-public class XADiskResourceAdapter extends FileSystemConfiguration implements ResourceAdapter {
+public class XADiskResourceAdapter extends org.xadisk.connector.XADiskResourceAdapter {
 
     private static final long serialVersionUID = 1L;
     private transient NativeXAFileSystem xaFileSystem;
 
     public void start(BootstrapContext bsContext) throws ResourceAdapterInternalException {
-        System.out.println("XADiskResourceAdapter.start");
+        System.out.println("XADiskResourceAdapter2--MY.start");
         try {
             this.xaFileSystem = NativeXAFileSystem.bootXAFileSystem(this, bsContext.getWorkManager());
-            System.out.println("XADiskResourceAdapter.tranDir:" + xaFileSystem.getTransactionLogsDir());
+
         } catch (XASystemException xase) {
             throw new ResourceAdapterInternalException(xase);
         }
     }
 
     public void stop() {
-        System.out.println("XADiskResourceAdapter.stop");
+        System.out.println("XADiskResourceAdapter2--MY.stop");
         try {
+
+            deleteOldLogs(xaFileSystem.getTransactionLogsDir());
             xaFileSystem.shutdown();
         } catch (IOException ioe) {
         }
     }
 
     public void endpointActivation(MessageEndpointFactory mef, ActivationSpec as) throws ResourceException {
-        System.out.println("XADiskResourceAdapter.endpointActivation");
+        System.out.println("XADiskResourceAdapter2--MY.endpointActivation");
         try {
             XADiskActivationSpecImpl xadiskAS = (XADiskActivationSpecImpl) as;
             EndPointActivation epActivation = new EndPointActivation(mef, xadiskAS);
@@ -71,7 +76,7 @@ public class XADiskResourceAdapter extends FileSystemConfiguration implements Re
     }
 
     public void endpointDeactivation(MessageEndpointFactory mef, ActivationSpec as) {
-        System.out.println("XADiskResourceAdapter.endpointDeactivation");
+        System.out.println("XADiskResourceAdapter2--MY.endpointDeactivation");
         try {
             XADiskActivationSpecImpl xadiskAS = (XADiskActivationSpecImpl) as;
             EndPointActivation epActivation = new EndPointActivation(mef, xadiskAS);
@@ -92,7 +97,7 @@ public class XADiskResourceAdapter extends FileSystemConfiguration implements Re
     }
 
     public XAResource[] getXAResources(ActivationSpec[] as) throws ResourceException {
-        System.out.println("XADiskResourceAdapter.getXAResources");
+        System.out.println("XADiskResourceAdapter2--MY.getXAResources");
         //as we now can have connectivity to multiple remote xadisk instances, so modifying this method.
         List<XAResource> xars = new ArrayList<XAResource>();
         //though we could not have same LocalEPXAR because of "binding" with "event"
@@ -120,5 +125,30 @@ public class XADiskResourceAdapter extends FileSystemConfiguration implements Re
             xars.add(uniqueXAFileSystem.getEventProcessingXAResourceForRecovery());
         }
         return xars.toArray(new XAResource[0]);
+    }
+
+    /**
+     * Delete old logss befor shutdown
+     * @param txDir
+     */
+    public static  void deleteOldLogs(String txDir) {
+        File logErase = new File(txDir + File.separator + ".." + File.separator);
+
+        System.out.println("XADiskResourceAdapter2--MY.start" + logErase.getParent());
+
+        FilenameFilter filenameFilter = new FilenameFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                if ( new File( dir, name ).isDirectory() )
+                {
+                    return false;
+                }
+                return name.startsWith("xadisk") && ! name.endsWith(".log");
+            }
+        };
+        for (File f: logErase.listFiles(filenameFilter)){
+            f.delete();
+            System.out.println("2DELETE: "+ f.getName());
+        }
     }
 }

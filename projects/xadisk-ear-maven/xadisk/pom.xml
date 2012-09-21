@@ -65,22 +65,22 @@ Contributor : Christoph Beck
                     </excludes>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-rar-plugin</artifactId>
-                <configuration>
-                    <includeJar>true</includeJar>
-                    <raXmlFile>src/META-INF/ra.xml</raXmlFile>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>rar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-rar-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<includeJar>true</includeJar>-->
+                    <!--<raXmlFile>src/META-INF/ra.xml</raXmlFile>-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>rar</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
         </plugins>
         <sourceDirectory>src</sourceDirectory>
         <resources>

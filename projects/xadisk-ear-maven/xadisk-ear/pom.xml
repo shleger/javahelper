@@ -22,10 +22,17 @@
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
                     <generateApplicationXml>true</generateApplicationXml>
                     <modules>
+                        <webModule>
+                            <groupId>java.net.xadisk</groupId>
+                            <artifactId>xadisk-war</artifactId>
+                            <bundleFileName>xadisk-war.war</bundleFileName>
+                            <unpack>true</unpack>
+                        </webModule>
                         <rarModule>
                             <groupId>java.net.xadisk</groupId>
                             <artifactId>xadisk-rar</artifactId>
                             <bundleFileName>xadisk-rar.rar</bundleFileName>
+                            <!--<unpack>true</unpack>-->
                         </rarModule>
                     </modules>
                 </configuration>
@@ -45,6 +52,27 @@
             <artifactId>xadisk-rar</artifactId>
             <version>1.2.1.00000</version>
             <type>rar</type>
+        </dependency>
+        <dependency>
+            <groupId>java.net.xadisk</groupId>
+            <artifactId>xadisk-war</artifactId>
+            <version>1.2.1.00000</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>java.net.xadisk</groupId>
+            <artifactId>xadisk-jar</artifactId>
+            <version>1.2.1.00000</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.6.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.6.10</version>
         </dependency>
     </dependencies>
 
