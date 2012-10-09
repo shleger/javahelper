@@ -6,6 +6,7 @@ target
 *.ids
 *.log
 *.tlog
+*.class
 *web/war
 *web/src/main/webapp/test
 *web/src/main/webapp/error
