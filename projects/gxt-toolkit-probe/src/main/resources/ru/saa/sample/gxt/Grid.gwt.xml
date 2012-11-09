@@ -15,8 +15,14 @@
   <!-- the theme of your GWT application by uncommenting          -->
   <!-- any one of the following lines.                            -->
   <inherits name='com.google.gwt.user.theme.standard.Standard' />
-  <!--<inherits name='com.sencha.gxt.ui.GXT'/>-->
     <inherits name="com.extjs.gxt.ui.GXT"/>
+    <inherits name='com.extjs.gxt.samples.resources.Resources' />
+    <inherits name='com.extjs.gxt.themes.Themes' />
+    <inherits name='com.extjs.gxt.charts.Chart' />
+    <inherits name="com.extjs.gxt.samples.resources.Resources"/>
+    <inherits name="com.extjs.gxt.samples.Examples"/>
+    <servlet path="/service" class="com.extjs.gxt.samples.server.ExampleServiceImpl"/>
+    <servlet path="/fileservice" class="com.extjs.gxt.samples.server.FileServiceImpl"/>
     <!--<inherits name="com.google.gwt.logging.Logging"/>-->
 
   <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->

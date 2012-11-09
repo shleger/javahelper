@@ -1,5 +1,7 @@
 package ru.saa.sample.gxt.client;
 
+import com.extjs.gxt.samples.client.examples.grid.MemoryPagingGridExample;
+import com.extjs.gxt.samples.client.examples.grid.PagingGridExample;
 import com.extjs.gxt.ui.client.Style;
 import com.extjs.gxt.ui.client.data.BasePagingLoader;
 import com.extjs.gxt.ui.client.data.PagingLoader;
@@ -71,9 +73,9 @@ public class GridKit implements EntryPoint {
         loader.setRemoteSort(true);
         ListStore<Employee> employeeList = new ListStore<Employee>(loader);
 
-        final PagingToolBar toolBar = new PagingToolBar(5);
+        final PagingToolBar toolBar = new PagingToolBar(2);
         toolBar.bind(loader);
-        loader.load(0, 5);
+        loader.load(0, 2);
 
         List<ColumnConfig> configs = new ArrayList<ColumnConfig>();
 
@@ -130,6 +132,9 @@ public class GridKit implements EntryPoint {
         RootPanel.get("gxtGrid").add(cp);
 
         RootPanel.get("gxtContainer").add(textButton);
+
+        MemoryPagingGridExample gridExample = new MemoryPagingGridExample();
+        RootPanel.get("pagableGrid").add(gridExample);
 
 
 

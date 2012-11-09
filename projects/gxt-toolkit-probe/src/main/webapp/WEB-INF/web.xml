@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE web-app
-    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
-    "http://java.sun.com/dtd/web-app_2_3.dtd">
+        PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
 
-  <!-- Servlets -->
-  <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>ru.saa.sample.gxt.server.GreetingServiceImpl</servlet-class>
-  </servlet>
+    <servlet>
+        <servlet-name>service</servlet-name>
+        <servlet-class>com.extjs.gxt.samples.server.ExampleServiceImpl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>fileservice</servlet-name>
+        <servlet-class>com.extjs.gxt.samples.server.FileServiceImpl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>xmltree</servlet-name>
+        <servlet-class>com.extjs.gxt.samples.server.XmlTreeServlet</servlet-class>
+    </servlet>
 
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/Toolkit/greet</url-pattern>
-  </servlet-mapping>
+    <!-- Servlets -->
+    <servlet>
+        <servlet-name>greetServlet</servlet-name>
+        <servlet-class>ru.saa.sample.gxt.server.GreetingServiceImpl</servlet-class>
+    </servlet>
 
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>Toolkit.html</welcome-file>
-  </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>greetServlet</servlet-name>
+        <url-pattern>/Toolkit/greet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>xmltree</servlet-name>
+        <url-pattern>/com.extjs.gxt.samples.explorer.Explorer/xmltreeloader</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>xmltree</servlet-name>
+        <url-pattern>/com.extjs.gxt.samples.Examples/xmltreeloader</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>service</servlet-name>
+        <url-pattern>/com.extjs.gxt.samples.explorer.Explorer/service</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>service</servlet-name>
+        <url-pattern>/com.extjs.gxt.samples.Examples/service</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>fileservice</servlet-name>
+        <url-pattern>/com.extjs.gxt.samples.explorer.Explorer/fileservice</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>fileservice</servlet-name>
+        <url-pattern>/com.extjs.gxt.samples.Examples/fileservice</url-pattern>
+    </servlet-mapping>
+
+    <!-- Default page to serve -->
+    <welcome-file-list>
+        <welcome-file>Toolkit.html</welcome-file>
+    </welcome-file-list>
 
 </web-app>
