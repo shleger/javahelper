@@ -1,6 +1,7 @@
 package ru.saa.sample.gxt.client;
 
 import com.extjs.gxt.samples.client.examples.grid.MemoryPagingGridExample;
+import com.extjs.gxt.samples.client.examples.grid.PagingBeanModelGridExample;
 import com.extjs.gxt.samples.client.examples.grid.PagingGridExample;
 import com.extjs.gxt.ui.client.Style;
 import com.extjs.gxt.ui.client.data.BasePagingLoader;
@@ -133,7 +134,7 @@ public class GridKit implements EntryPoint {
 
         RootPanel.get("gxtContainer").add(textButton);
 
-        MemoryPagingGridExample gridExample = new MemoryPagingGridExample();
+        PagingGridExample gridExample = new PagingGridExample();
         RootPanel.get("pagableGrid").add(gridExample);
 
 

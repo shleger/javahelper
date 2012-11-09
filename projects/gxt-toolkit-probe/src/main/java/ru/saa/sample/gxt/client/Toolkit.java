@@ -1,7 +1,7 @@
 package ru.saa.sample.gxt.client;
 
 import com.google.gwt.dom.client.Document;
-import com.sencha.gxt.widget.core.client.button.TextButton;
+import com.google.gwt.widget.client.TextButton;
 import ru.saa.sample.gxt.client.internationalization.LangConstantsMessages;
 import ru.saa.sample.gxt.client.internationalization.LangConstants;
 import ru.saa.sample.gxt.client.ui.factored.UserDashboard;

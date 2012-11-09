@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.extjs.gxt.samples.client.ExampleService;
 import com.extjs.gxt.samples.client.ExampleServiceAsync;
 import com.extjs.gxt.samples.client.Examples;
 import com.extjs.gxt.samples.client.examples.model.Post;
@@ -36,9 +37,12 @@ import com.extjs.gxt.ui.client.widget.grid.Grid;
 import com.extjs.gxt.ui.client.widget.layout.FitLayout;
 import com.extjs.gxt.ui.client.widget.layout.FlowLayout;
 import com.extjs.gxt.ui.client.widget.toolbar.PagingToolBar;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import ru.saa.sample.gxt.client.GreetingService;
+import ru.saa.sample.gxt.client.GreetingServiceAsync;
 
 public class PagingGridExample extends LayoutContainer {
 
@@ -46,7 +50,12 @@ public class PagingGridExample extends LayoutContainer {
   protected void onRender(Element parent, int index) {
     super.onRender(parent, index);
 
-    final ExampleServiceAsync service = (ExampleServiceAsync) Registry.get(Examples.SERVICE);
+     final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
+
+
+      //  Registry.get иницифлизируется через Examples_EntryPoint
+//      final ExampleServiceAsync service = (ExampleServiceAsync) Registry.get(Examples.SERVICE);
+    final ExampleServiceAsync service = (ExampleServiceAsync) GWT.create(ExampleService.class);
 
     FlowLayout layout = new FlowLayout(10);
     setLayout(layout);

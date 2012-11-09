@@ -38,6 +38,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>service</servlet-name>
+        <url-pattern>/Toolkit/service</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>service</servlet-name>
         <url-pattern>/com.extjs.gxt.samples.explorer.Explorer/service</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
