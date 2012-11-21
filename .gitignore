@@ -1,6 +1,5 @@
 .repository
 target
-*.iml
 *.ipr
 *.iws
 *.ids
@@ -25,7 +24,6 @@ gwt-unitCache
 *Messages.java
 *Constants.java
 atlassian-ide-plugin.xml
-.idea
 .m2
 */.gwt/*.*
 reports/*.*

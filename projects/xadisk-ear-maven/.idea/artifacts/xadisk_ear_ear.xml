@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="xadisk-ear:ear">
+    <output-path>$PROJECT_DIR$/xadisk-ear/target</output-path>
+    <root id="archive" name="xadisk-ear.ear">
+      <element id="artifact" artifact-name="xadisk-ear:ear exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xadisk/xadisk.iml" filepath="$PROJECT_DIR$/xadisk/xadisk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xadisk-all.iml" filepath="$PROJECT_DIR$/xadisk-all.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xadisk-ear/xadisk-ear.iml" filepath="$PROJECT_DIR$/xadisk-ear/xadisk-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xadisk-rar/xadisk-rar.iml" filepath="$PROJECT_DIR$/xadisk-rar/xadisk-rar.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -74,7 +74,7 @@ public class PagingGridExample extends LayoutContainer {
 
     ListStore<Post> store = new ListStore<Post>(loader);
 
-    final PagingToolBar toolBar = new PagingToolBar(50);
+    final PagingToolBar toolBar = new PagingToolBar(2);
     toolBar.bind(loader);
 
     List<ColumnConfig> columns = new ArrayList<ColumnConfig>();
@@ -94,7 +94,7 @@ public class PagingGridExample extends LayoutContainer {
       public void handleEvent(GridEvent<Post> be) {
         PagingLoadConfig config = new BasePagingLoadConfig();
         config.setOffset(0);
-        config.setLimit(50);
+        config.setLimit(2);
         
         Map<String, Object> state = grid.getState();
         if (state.containsKey("offset")) {

@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="xadisk-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/xadisk-ear/target/xadisk-ear</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="xadisk-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="lib">
+        <element id="archive" name="xadisk-1.2.1.00000.jar">
+          <element id="module-output" name="xadisk" />
+        </element>
+        <element id="library" level="project" name="Maven: javax.resource:connector-api:1.5" />
+        <element id="library" level="project" name="Maven: javaee:javaee-api:5" />
+      </element>
+      <element id="archive" name="xadisk-rar.rar">
+        <element id="module-output" name="xadisk-rar" />
+      </element>
+    </root>
+  </artifact>
+</component>
