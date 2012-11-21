@@ -26,7 +26,7 @@
                     <appEngineVersion>${gae.version}</appEngineVersion>
                     <appEngineHome>${gae.home}</appEngineHome>
                     <runTarget>Gwtpsample.html</runTarget>
-                    <module>com.gwtplatform.samples.basic.Gwtpsample</module>
+                    <module>ru.saa.basic.SaaGwtpsample</module>
                 </configuration>
             </plugin>
 
