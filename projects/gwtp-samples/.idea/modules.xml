@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gwtp-sample-basic/gwtp-sample-basic.iml" filepath="$PROJECT_DIR$/gwtp-sample-basic/gwtp-sample-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtp-sample-basic-spring/gwtp-sample-basic-spring.iml" filepath="$PROJECT_DIR$/gwtp-sample-basic-spring/gwtp-sample-basic-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtp-sample-crawler-service/gwtp-sample-crawler-service.iml" filepath="$PROJECT_DIR$/gwtp-sample-crawler-service/gwtp-sample-crawler-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtp-sample-hplace/gwtp-sample-hplace.iml" filepath="$PROJECT_DIR$/gwtp-sample-hplace/gwtp-sample-hplace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtp-sample-nested/gwtp-sample-nested.iml" filepath="$PROJECT_DIR$/gwtp-sample-nested/gwtp-sample-nested.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtp-sample-tab/gwtp-sample-tab.iml" filepath="$PROJECT_DIR$/gwtp-sample-tab/gwtp-sample-tab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwtp-samples.iml" filepath="$PROJECT_DIR$/gwtp-samples.iml" />
+    </modules>
+  </component>
+</project>
+

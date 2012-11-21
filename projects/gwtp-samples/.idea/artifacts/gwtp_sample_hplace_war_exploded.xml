@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="gwtp-sample-hplace:war exploded">
+    <output-path>$PROJECT_DIR$/gwtp-sample-hplace/target/gwtp-sample-hplace-0.7</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="gwtp-sample-hplace/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="gwtp-sample-hplace" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.gwt:gwt-servlet:2.4.0" />
+          <element id="library" level="project" name="Maven: com.google.inject:guice:3.0" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-servlet:3.0" />
+          <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-assistedinject:3.0" />
+          <element id="library" level="project" name="Maven: com.gwtplatform:gwtp-dispatch-shared:0.7" />
+          <element id="library" level="project" name="Maven: com.gwtplatform:gwtp-dispatch-server-guice:0.7" />
+          <element id="library" level="project" name="Maven: com.gwtplatform:gwtp-dispatch-server:0.7" />
+          <element id="library" level="project" name="Maven: com.gwtplatform:gwtp-crawler:0.7" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+        </element>
+      </element>
+      <element id="gwt-compiler-output" facet="gwtp-sample-hplace/gwt/GWT" />
+    </root>
+  </artifact>
+</component>

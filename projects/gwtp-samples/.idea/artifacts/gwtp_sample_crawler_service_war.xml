@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gwtp-sample-crawler-service:war">
+    <output-path>$PROJECT_DIR$/gwtp-sample-crawler-service/target</output-path>
+    <root id="archive" name="gwtp-sample-crawler-service-0.7.war">
+      <element id="artifact" artifact-name="gwtp-sample-crawler-service:war exploded" />
+    </root>
+  </artifact>
+</component>

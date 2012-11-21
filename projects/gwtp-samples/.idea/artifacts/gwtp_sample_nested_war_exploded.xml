@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="gwtp-sample-nested:war exploded">
+    <output-path>$PROJECT_DIR$/gwtp-sample-nested/target/gwtp-sample-nested-0.7</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="gwtp-sample-nested/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="gwtp-sample-nested" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.inject:guice:3.0" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-servlet:3.0" />
+          <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-assistedinject:3.0" />
+          <element id="library" level="project" name="Maven: com.google.gwt:gwt-servlet:2.4.0" />
+        </element>
+      </element>
+      <element id="gwt-compiler-output" facet="gwtp-sample-nested/gwt/GWT" />
+    </root>
+  </artifact>
+</component>

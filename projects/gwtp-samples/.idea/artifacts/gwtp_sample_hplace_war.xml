@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gwtp-sample-hplace:war">
+    <output-path>$PROJECT_DIR$/gwtp-sample-hplace/target</output-path>
+    <root id="archive" name="gwtp-sample-hplace-0.7.war">
+      <element id="artifact" artifact-name="gwtp-sample-hplace:war exploded" />
+    </root>
+  </artifact>
+</component>

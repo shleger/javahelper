@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gwtp-sample-tab:war">
+    <output-path>$PROJECT_DIR$/gwtp-sample-tab/target</output-path>
+    <root id="archive" name="gwtp-sample-tab-0.7.war">
+      <element id="artifact" artifact-name="gwtp-sample-tab:war exploded" />
+    </root>
+  </artifact>
+</component>

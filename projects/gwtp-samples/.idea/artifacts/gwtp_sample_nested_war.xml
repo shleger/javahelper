@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gwtp-sample-nested:war">
+    <output-path>$PROJECT_DIR$/gwtp-sample-nested/target</output-path>
+    <root id="archive" name="gwtp-sample-nested-0.7.war">
+      <element id="artifact" artifact-name="gwtp-sample-nested:war exploded" />
+    </root>
+  </artifact>
+</component>
