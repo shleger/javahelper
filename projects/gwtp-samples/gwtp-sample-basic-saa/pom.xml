@@ -20,12 +20,12 @@
                 <configuration>
                     <logLevel>INFO</logLevel>
                     <style>${gwt.style}</style>
-                    <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server>
+                    <!--<server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server>-->
                     <hostedWebapp>${webappDirectory}</hostedWebapp>
                     <copyWebapp>true</copyWebapp>
-                    <appEngineVersion>${gae.version}</appEngineVersion>
-                    <appEngineHome>${gae.home}</appEngineHome>
-                    <runTarget>Gwtpsample.html</runTarget>
+                    <!--<appEngineVersion>${gae.version}</appEngineVersion>-->
+                    <!--<appEngineHome>${gae.home}</appEngineHome>-->
+                    <runTarget>SaaGwtpsample.html</runTarget>
                     <module>ru.saa.basic.SaaGwtpsample</module>
                 </configuration>
             </plugin>
