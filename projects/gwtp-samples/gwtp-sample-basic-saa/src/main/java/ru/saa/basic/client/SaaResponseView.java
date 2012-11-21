@@ -19,7 +19,6 @@ package ru.saa.basic.client;
 import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewImpl;
-import com.gwtplatform.samples.basic.client.ResponseView;
 
 /**
  * @author Philippe Beaudoin
@@ -27,7 +26,7 @@ import com.gwtplatform.samples.basic.client.ResponseView;
 public class SaaResponseView extends ViewImpl implements SaaResponsePresenter.MyView {
 
 
-  HTMLPanel panel = new HTMLPanel(ResponseView.html);
+  HTMLPanel panel = new HTMLPanel(Template.RESPONSE_HTML_TMPL);
 
   private final Button closeButton;
   private final HTML serverResponseLabel;

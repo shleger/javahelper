@@ -17,7 +17,7 @@
 package ru.saa.basic.server;
 
 import com.gwtplatform.dispatch.server.guice.HandlerModule;
-import com.gwtplatform.samples.basic.shared.SendTextToServer;
+import ru.saa.basic.shared.SendTextToServer;
 
 /**
  * Module which binds the handlers and configurations.

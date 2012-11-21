@@ -3,7 +3,6 @@ package ru.saa.basic.client;
 import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewImpl;
-import com.gwtplatform.samples.basic.client.MainPageView;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,7 +21,7 @@ public class SaaRequestView extends ViewImpl implements SaaRequestPresenter.MyVi
     @Inject
     public SaaRequestView() {
 
-         panel = new HTMLPanel(MainPageView.html);
+         panel = new HTMLPanel(Template.REQUEST_HTML_TMPL);
 
         sendButton = new Button("Send to");
         nameField = new TextBox();

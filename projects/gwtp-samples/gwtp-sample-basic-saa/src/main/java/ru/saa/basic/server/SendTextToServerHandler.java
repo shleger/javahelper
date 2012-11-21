@@ -21,9 +21,8 @@ import com.google.inject.Provider;
 import com.gwtplatform.dispatch.server.ExecutionContext;
 import com.gwtplatform.dispatch.server.actionhandler.ActionHandler;
 import com.gwtplatform.dispatch.shared.ActionException;
-import com.gwtplatform.samples.basic.shared.FieldVerifier;
-import com.gwtplatform.samples.basic.shared.SendTextToServer;
-import com.gwtplatform.samples.basic.shared.SendTextToServerResult;
+import ru.saa.basic.shared.SendTextToServer;
+import ru.saa.basic.shared.SendTextToServerResult;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -51,7 +50,7 @@ public class SendTextToServerHandler implements
     String input = action.getTextToServer();
 
     // Verify that the input is valid.
-    if (!FieldVerifier.isValidName(input)) {
+    if (input.matches("\\d+")) {
       // If the input is not valid, throw an IllegalArgumentException back to
       // the client.
       throw new ActionException("Name must be at least 4 characters long");
