@@ -16,7 +16,7 @@
 		<!-- GWT needs at least java 1.5 -->
 		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<org.springframework.version>3.0.5.RELEASE</org.springframework.version>
+		<org.springframework.version>3.2.4.RELEASE</org.springframework.version>
 		<slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
 	</properties>
 
